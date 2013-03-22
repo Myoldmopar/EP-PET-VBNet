@@ -1,0 +1,1 @@
+Fluid properties and refrigerant properties are translated from OSU routines, no specific author available

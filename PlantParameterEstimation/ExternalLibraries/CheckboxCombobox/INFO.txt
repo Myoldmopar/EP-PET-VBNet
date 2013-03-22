@@ -1,0 +1,8 @@
+license:
+CPOL
+
+main site:
+http://www.codeproject.com/Articles/21085/CheckBox-ComboBox-Extending-the-ComboBox-Class-and
+
+source code:
+http://www.codeproject.com/KB/combobox/extending_combobox/CheckBoxComboBox.zip

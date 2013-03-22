@@ -1,0 +1,9 @@
+license:
+3-Clause BSD
+
+main site:
+http://netcontrols.org/nplot/wiki/index.php
+
+source code:
+https://nplot.svn.sourceforge.net/svnroot/nplot/
+examples contained within code package

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE7467CF-D1D3-44B1-96DD-626C96E414F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Plant_Parameter_Estimation.My.MyApplication</StartupObject>
+    <RootNamespace>Plant_Parameter_Estimation</RootNamespace>
+    <AssemblyName>Plant Parameter Estimation</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ManifestCertificateThumbprint>6309A4BF37DD7488724F51A12DB29E7EA9EED637</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Plant Parameter Estimation_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.9.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Plant Parameter Estimation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Plant Parameter Estimation.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CheckBoxComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalLibraries\CheckboxCombobox\CheckBoxComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MatrixLibrary, Version=1.0.4731.27367, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalLibraries\MatrixLibrary\MatrixLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NPlot, Version=0.9.10.0, Culture=neutral, PublicKeyToken=4eda430eb4395eb1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalLibraries\NPlot\NPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentClasses\HeatPump_WaterAir.vb" />
+    <Compile Include="ComponentClasses\HeatPump_WaterWater.vb" />
+    <Compile Include="ComponentClasses\Pumps.vb" />
+    <Compile Include="CustomControls\CorrectionFactorEntry.Designer.vb">
+      <DependentUpon>CorrectionFactorEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CorrectionFactorEntry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataModules\NelderMead.vb" />
+    <Compile Include="GeneralizedForms\GeneralTwoChoiceForm.Designer.vb">
+      <DependentUpon>GeneralTwoChoiceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedForms\GeneralTwoChoiceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntryForms\CatalogDataRepairForm.Designer.vb">
+      <DependentUpon>CatalogDataRepairForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryForms\CatalogDataRepairForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralizedForms\GeneralDetailedForm.Designer.vb">
+      <DependentUpon>GeneralDetailedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedForms\GeneralDetailedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\GeneralDetailedFormEntry.Designer.vb">
+      <DependentUpon>GeneralDetailedFormEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\GeneralDetailedFormEntry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralizedForms\GeneralProgressForm.Designer.vb">
+      <DependentUpon>GeneralProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralizedForms\GeneralProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataModules\Interfaces.vb" />
+    <Compile Include="DataModules\ParametricDataSet.vb" />
+    <Compile Include="DataEntryForms\CorrectionFactorDataForm.Designer.vb">
+      <DependentUpon>CorrectionFactorDataForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryForms\CorrectionFactorDataForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntryForms\CorrectionFactorForm.Designer.vb">
+      <DependentUpon>CorrectionFactorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryForms\CorrectionFactorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\CatalogDataPlotForm.Designer.vb">
+      <DependentUpon>CatalogDataPlotForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\CatalogDataPlotForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\RequiredDataForm.Designer.vb">
+      <DependentUpon>RequiredDataForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\RequiredDataForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataEntryForms\CatalogDataWizard.designer.vb">
+      <DependentUpon>CatalogDataWizard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntryForms\CatalogDataWizard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyData\FluidProperties.vb" />
+    <Compile Include="OtherForms\PlotForm.Designer.vb">
+      <DependentUpon>PlotForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\PlotForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PropertyData\RefrigerantProperties.vb" />
+    <Compile Include="DataModules\PublicData.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DataModules\Utilities.vb" />
+    <Compile Include="OtherForms\WalkthroughForm.Designer.vb">
+      <DependentUpon>WalkthroughForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\WalkthroughForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomControls\CorrectionFactorEntry.resx">
+      <DependentUpon>CorrectionFactorEntry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralizedForms\GeneralTwoChoiceForm.resx">
+      <DependentUpon>GeneralTwoChoiceForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntryForms\CatalogDataRepairForm.resx">
+      <DependentUpon>CatalogDataRepairForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralizedForms\GeneralDetailedForm.resx">
+      <DependentUpon>GeneralDetailedForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\GeneralDetailedFormEntry.resx">
+      <DependentUpon>GeneralDetailedFormEntry.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralizedForms\GeneralProgressForm.resx">
+      <DependentUpon>GeneralProgressForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntryForms\CorrectionFactorDataForm.resx">
+      <DependentUpon>CorrectionFactorDataForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntryForms\CorrectionFactorForm.resx">
+      <DependentUpon>CorrectionFactorForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\CatalogDataPlotForm.resx">
+      <DependentUpon>CatalogDataPlotForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\RequiredDataForm.resx">
+      <DependentUpon>RequiredDataForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataEntryForms\CatalogDataWizard.resx">
+      <DependentUpon>CatalogDataWizard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\PlotForm.resx">
+      <DependentUpon>PlotForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\WalkthroughForm.resx">
+      <DependentUpon>WalkthroughForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainPE2Icon2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\MainPE2Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
