@@ -302,6 +302,13 @@ Public Class MainForm
 
 	Private Sub btnEngage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEngage.Click
 
+        'we should probably check first before we overwrite anything already entered
+        If PublicData.CatalogDataInPlace Then
+            If ShowOKCancelBox("This will reset the form and begin operating on a new data entry task, clearing out any data you have entered.") = MsgBoxResult.Cancel Then
+                Return
+            End If
+        End If
+
 		PublicData.CatalogDataInPlace = False
 
 		'the following is needed to make sure we use the right details form
