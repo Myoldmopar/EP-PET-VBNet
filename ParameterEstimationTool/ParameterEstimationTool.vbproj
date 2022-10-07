@@ -20,7 +20,7 @@
     <ManifestCertificateThumbprint>6309A4BF37DD7488724F51A12DB29E7EA9EED637</ManifestCertificateThumbprint>
     <ManifestKeyFile>Plant Parameter Estimation_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <FileUpgradeFlags>
     </FileUpgradeFlags>

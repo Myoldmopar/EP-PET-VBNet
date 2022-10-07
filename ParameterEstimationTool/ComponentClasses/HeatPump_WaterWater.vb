@@ -203,7 +203,7 @@
 				For J As Integer = 0 To NumCoefficients_BZ
 					FieldValues.Add(Math.Round(C2(J, 0), DecPts).ToString)
 				Next
-				FieldValues(19) = "Your HP Cycle Time"
+				FieldValues.Add("Your HP Cycle Time")
 				TextOutput = EPlusObject(FieldValues.ToArray, Me.EnergyPlusObjectFormat())
 			Case ObjectOrParList.ParameterList
 				Dim TextBuilder As New System.Text.StringBuilder
