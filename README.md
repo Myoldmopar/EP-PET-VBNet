@@ -10,3 +10,5 @@ The tool's main features include:
 * The creation of EnergyPlus input objects or parameter summaries based on this data.
 * Graphical reporting on the quality of the input data as well as the resulting component parameters.
 * Easy extensibility, with special numbered hooks in the code for performing extension to additional units or component types.
+
+This tool is superseded by a python version, available here: github.com/myoldmopar/energypluspet
